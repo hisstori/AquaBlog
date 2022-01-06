@@ -1,15 +1,47 @@
+import React, { Component } from "react";
+//import ReactDOM from "react-dom";
 import logo from "./logo.svg";
 import "./App.css";
+//import TwentyNine from "./TwentyNine";
+//import { Route, Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>A Novice Aquarists's Journey</h1>
-      <header className="App-header">
-        {" "}
-        <a className="Tab" href="">About Me</a> -  <a className="Tab" href="">29 Gallon</a> -{" "}
-        <a className="Tab" href="">20 Gallon Long</a> - <a className="Tab" href="">10 Gallon Community</a> -{" "}
-        <a className="Tab" href="">10 Gallon GBR</a>
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null,
+    };
+    this.setData = this.setData.bind(this);
+  }
+
+  setData(data) {
+    this.setState({ data: data });
+  }
+  render() {
+    return (
+      <div className="App">
+        <h1>A Novice Aquarists's Journey</h1>
+        <header className="App-header">
+          {" "}
+          <a className="Tab" href="">
+            About Me
+          </a>{" "}
+          -{" "}
+          <a className="Tab" href="">
+            29 Gallon
+          </a>{" "}
+          -{" "}
+          <a className="Tab" href="">
+            20 Gallon Long
+          </a>{" "}
+          -{" "}
+          <a className="Tab" href="">
+            10 Gallon Community
+          </a>{" "}
+          -{" "}
+          <a className="Tab" href="">
+            10 Gallon GBR
+          </a>
         </header>
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World</h1>
@@ -38,8 +70,8 @@ function App() {
         <h4>10 Gallon Community:</h4> 1 Betta Male Splendes, 1 Pair of Peacok
         Gudgeon(m/f), 8 Celestial Pearl Danio, 1 Nerite Snail, 1 Assassin Snail
         Eater, 1 Pair of Khuli Loach(m/f), 15+ Cherry Shrimp.
-        <h4>10 Gallon GBR:</h4> 1 Clown Pleco, 3 Bamboo Shrimp, 3 German Blue
-        Ram (1m/2f), 1 Amano Shrimp, 1 Ghost Shrimp.
+        <h4>10 Gallon GBR:</h4> 3 Bamboo Shrimp, 3 German Blue Ram (1m/2f), 1
+        Amano Shrimp, 1 Ghost Shrimp.
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -48,8 +80,10 @@ function App() {
         >
           Learn React
         </a>
-    </div>
-  );
+        {/*<Route path="/" exact component={App} />*/}
+        {/*<Route path="/TwentyNine" component={TwentyNine} />*/}
+      </div>
+    );
+  }
 }
-
 export default App;
